@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css" />
+    
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <style>
+        
+        </style>
+    <script>
+        $(document).ready(function () {
+            $('#tab-list').on('click', '.close', function () {
+                var tabID = $(this).parents('a').attr('href');
+                $(this).parents('li').remove();
+                $(tabID).remove();
+
+                //display first tab
+                var tabFirst = $('#tab-list a:first');
+                resetTab();
+                tabFirst.tab('show');
+            });
+        });
+
+    </script>
+    <style>
+        .droptarget {
+            border: 1px dotted #e60e0e;
+        }
+
+        .divcoll {
+            border: 1px solid #80808087;
+            width: 40%;
+        }
+
+        .row {
+            border-bottom: 1px solid #8080806b;
+        }
+
+        .ContainerColumn {
+            border: 1px solid #80808087;
+            padding: 0px;
+        }
+
+        div.ContainerColumn:hover {
+            background-color: #cac6c6;
+            padding: 0px;
+        }
+
+        .margin0 {
+            margin: 0px;
+        }
+
+        .toolbar {
+            background-color: aliceblue;
+        }
+
+        .pgTable {
+            border: solid 1px #95B8E7;
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        .pgGroupRow {
+            margin: 0;
+            clear: both;
+            padding: 0 8px;
+        }
+
+        .pgGroupCell {
+            padding: 5px;
+        }
+
+        .pgCell {
+            border: dotted 1px #ccc;
+            padding: 5px;
+        }
+
+        .propGrid {
+            margin: 0px !important;
+            width: 100%;
+
+        }
+
+        /* div[compname="Container"] :hover {
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+         div[compname="LTextbox"] :hover {
+            border: dotted 1px #e79595;
+        } */
+
+        .component-btn-group {
+            position: relative;
+            z-index: 1000;
+            margin-top: -2px;
+        }
+
+        #LayoutPanel {
+   background-color: #ffffff0a;
+ 
+   border: solid 1px #014cef;
+   height: 53em !important;
+}
+
+        .component-settings-button {
+            padding: 2px 2px;
+            font-size: 10px;
+            line-height: 1.2em;
+            border-radius: 0;
+            width: 18px;
+            height: 18px;
+        }
+
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table.gridtable {
+            font-family: verdana, arial, sans-serif;
+            font-size: 11px;
+            color: #333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+        }
+
+        table.gridtable th {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #dedede;
+        }
+
+        table.gridtable td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+        }
+        
+#components {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-left: -19px;
+}
+
+        .component-common {
+            box-sizing: border-box;
+    border-radius: 4px;
+    float: left;
+    height: 65px;
+    width: 45%;
+    background-color: white;
+    border: 1px solid #0404048f;
+    line-height: 1.2;
+    margin: 0px;
+    margin-bottom: 5px;
+    text-align: center;
+    padding-top: 23px;
+    margin-left: 10px;
+        }
+
+        .component-common:hover {
+            background: #79787885;
+            color: white;
+            box-shadow: 1px 1px 1px 1px rgb(104, 103, 103);
+        }
+
+        
+
+        .component-prepared {
+            background-color: #bd213014;
+            margin: 5PX;
+        }
+
+        .component-prepared:hover {
+            background: #f4f4f4;
+        }
+
+        .propertyInput {
+            border: 1px solid #ceeae9;
+        }
+        .card-body{
+            padding-bottom: 23em;
+        }
+    </style>
+</head>
+
+<body>
+<script>
+    
+</script>
+    <div class="container-fluid" style="padding: 5px 5px 5px 5px;">
+        <div class="row">
+
+
+            <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <a class="navbar-brand" href="#">T FORM BUİLDER</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class=" collapse navbar-collapse" id="navbarNavAltMarkup" style="padding-left: 113em;">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" id="btnSave" href="#">Kaydet</a>
+                        <a class="nav-item nav-link" id="btnLoad" href="#">Yükle</a>
+                        <a class="nav-item nav-link" id="btnDelete" href="#">Sil</a>
+                        <a class="nav-item nav-link disabled" id="btnRefresh" href="#">Yenile</a>
+                        <a class="nav-item nav-link disabled" id="btnRefresh" href="#">Ayarlar</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        </div>
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2" style=" padding: 0px;">
+                
+
+
+                <div id="accordion">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Inputs
+                          </button>
+                        </h5>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                          
+                            <div id=components></div>  
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            DropDowns
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Grids
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+               
+
+                
+                    
+                
+                            
+                      
+                    
+                                
+                      
+                  
+
+
+           
+            </div>
+            <div class="col-md-7" id="MainPanel">
+
+            </div>
+            <div class="col-md-3" style="background-color: #80808047;padding: 0px;" id="cpropGrid">
+
+            </div>
+        </div>
+    </div>
+    </div>
+ 
+    <div id="exportjson"></div>
+    <script> var exports = {};</script>
+    <script type="module" src="public/App.js"> </script>
+    <script>
+        var exportArray = new Array();
+        function recursiveEach($element) {
+            var localarr = new Array();
+            $element.children().each(function () {
+                var _obj = null;
+                if ($(this).attr("compname") != undefined) {
+                    _obj = { compName: $(this).attr("compname"), subComps: new Array() }
+                    localarr.push(_obj);
+                }
+                var $currentElement = $(this);
+                var coms = recursiveEach($currentElement);
+                if (coms.length > 0) {
+                    var arr = recursiveEach($currentElement);
+                    _obj.subComps = _obj.subComps.concat(arr);
+                    return _obj;
+                }
+
+            });
+            return localarr;
+        }
+        $(document).ready(function () {
+            $("#exportjson").click(function () {
+                exportArray = new Array();
+                var layout = $("#LayoutPanel");
+                var coms = recursiveEach(layout);
+                if (coms.length > 0)
+                    exportArray.push(recursiveEach(layout));
+
+                console.log(JSON.stringify(exportArray));
+            });
+
+
+            const arrows = document.querySelectorAll(".arrow");
+
+arrows.forEach((arrow) => {
+  arrow.addEventListener("click", (e) => {
+    const arrowParent = e.target.closest(".arrow").parentElement.parentElement;
+    arrowParent.classList.toggle("showMenu");
+  });
+});
+
+const sidebar = document.querySelector(".sidebar");
+const sidebarBtn = document.querySelector(".bx-menu");
+
+sidebarBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("close");
+});
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>

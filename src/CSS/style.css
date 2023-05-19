@@ -1,0 +1,28 @@
+.droptarget {
+    border: 1px dotted #e60e0e;
+  }
+  .divcoll {
+      border:1px solid #80808087;
+      width: 40%;
+  }
+  .row {
+      border-bottom: 1px solid #8080806b;
+  } 
+.pgTable {
+border: solid 1px #95B8E7;
+border-spacing: 0;
+}
+
+.pgGroupRow {
+background-color: #E0ECFF;
+font-weight: bold;
+}
+
+.pgGroupCell {
+padding: 5px;
+}
+
+.pgCell {
+border: dotted 1px #ccc;
+padding: 5px;
+}
