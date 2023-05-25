@@ -16,7 +16,7 @@ export class BaseComponent {
         var tball = document.createElement("div");
         tball.className = "component-btn-group";
         var tbRemove = document.createElement("div");
-        tbRemove.className = "btn btn-xxs btn-danger component-settings-button component-settings-button-remove  float-right";
+        tbRemove.className = "  pl-1  float-right";
         tbRemove.setAttribute("title", "Kontrolü kaldır");
         tbRemove.addEventListener('click', function (event) {
             var ppanel = document.getElementById("cpropGrid");
@@ -30,7 +30,7 @@ export class BaseComponent {
         removei.className = "fa fa-remove";
         tbRemove.appendChild(removei);
         var tbEdit = document.createElement("div");
-        tbEdit.className = "btn btn-xxs btn-secondary component-settings-button component-settings-button-edit float-left";
+        tbEdit.className = "  pl-1  float-right";
         tbEdit.setAttribute("title", "Özellikler");
         tbEdit.addEventListener('click', function (event) {
             var ppanel = document.getElementById("cpropGrid");
@@ -47,7 +47,7 @@ export class BaseComponent {
         editi.className = "fa fa-cog";
         tbEdit.appendChild(editi);
         var tbMove = document.createElement("div");
-        tbMove.className = "btn btn-xxs btn-secondary component-settings-button component-settings-button-move  float-left";
+        tbMove.className = "   pl-1  float-right";
         tbMove.setAttribute("title", "Sürekle Bırak");
         tbMove.ondragstart = x => {
             const element = x.target;

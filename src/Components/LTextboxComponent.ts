@@ -10,9 +10,10 @@ export class LTextboxComponent extends BaseComponent{
                 if(!this.isComponent)
                 {
                     let toolbar=super.CreateToolBar();
-                    control.appendChild(toolbar);
+                    
                     control.appendChild(this.CreateLabel());
                     control.appendChild(this.CreateTextbox());
+                    control.appendChild(toolbar);
                     control.className="component-prepared"
                 }else
                 {
