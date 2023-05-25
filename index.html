@@ -8,11 +8,82 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+</head>
 
 
     <style>
-        
+
+.historyli-item {
+    font-size: 20px;
+   
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    
+}
+
+.historyli-item:hover {
+    font-size: 20px;
+    background-color: #b5b5b585;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    
+}
+
+body {
+  padding : 10px ;
+  
+}
+
+#exTab1 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+#exTab2 h3 {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+
+
+
+
+
+        .bg-white{
+            background-color: #cb3c1f !important;
+            color:white
+        }
+        .navbar-light .navbar-brand{
+            color:white;
+            font-weight: 600;
+        }
+        .nav-item ,.nav-link{
+            color:white !important
+        }
         </style>
     <script>
         $(document).ready(function () {
@@ -30,6 +101,325 @@
 
     </script>
     <style>
+
+.ui-sidebar {
+    background-color: #FFF6E6;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.ui-sidebar .mainContent {
+    padding: 30px;
+}
+.card{
+    
+}
+
+.sidebar-icons {
+  
+    position: fixed;
+    top: 61px;
+    left: 0px;
+    width: 62px;
+    background: #cb3c1f;
+    z-index: 1051;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    height: 100vh;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.sidebar-icons a {
+    color: #fff;
+    margin: 10px 0 10px 5px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0px 14px 0 10px;
+}
+
+.sidebar-icons a.active {
+
+    border-left: 3px white solid;
+}
+
+.sidebar-icons a:last-child {
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    background-color: #3F464D;
+    width: 55px;
+    text-align: center;
+    height: 40px;
+    padding: 10px;
+    margin: 0;
+}
+
+.sidebar-icons a i {
+    padding-right: 0;
+    font-size: 20px;
+}
+
+.sidebar-icons a i:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.offcanvas.offcanvas-start {
+    left: 40px;
+    visibility: visible;
+    background-color: #FF8066;
+    margin-right: 20px;
+    color: #fff;
+    width: 250px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.offcanvas-body {
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+}
+
+.offcanvas-body p {
+    margin: 10px 0;
+}
+
+.offcanvas-body p:last-child {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #3F464D;
+    width: 43px;
+    text-align: center;
+    height: 40px;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+}
+
+.ui-sidebar .btn {
+    position: fixed;
+    left: 0;
+    z-index: 999999;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    background-color: transparent;
+    border: none;
+    -webkit-transition: margin .3s;
+    -o-transition: margin .3s;
+    transition: margin .3s;
+    -webkit-transition-delay: .3s;
+         -o-transition-delay: .3s;
+            transition-delay: .3s;
+    height: 50px;
+    padding: 0 0 0 25px;
+}
+
+.ui-sidebar .btn:focus,
+.ui-sidebar .btn:focus-visible {
+    outline: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.btn.open {
+    margin-left: 240px;
+}
+
+.btn:hover,
+.btn:focus-visible,
+.btn:active {
+    background-color:transparent !important;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.btn i {
+    padding-right: 0;
+    background-color: #7ECEFC;
+    padding: 10px;
+    border-radius: 40px;
+    color: #3F464D;
+    margin-left: 0;
+    transition-delay: .1s;
+}
+
+.btn i:nth-child(1) {
+    opacity: 1;
+}
+
+.btn i:nth-child(2) {
+    opacity: 0;
+    margin-left: -34px;
+}
+
+.btn.open i:nth-child(1) {
+    opacity: 0;
+    margin-left: 0;
+}
+
+.btn.open i:nth-child(2) {
+    opacity: 1;
+}
+
+.ui-sidebar .mainContent {
+    margin-left: 40px;
+
+}
+
+.ui-sidebar .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ui-sidebar .content-wrapper h1 {
+    text-align: center;
+    font-family: 'DM Serif Display', serif;
+}
+
+.ui-sidebar .content-wrapper p {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.ui-sidebar .content-wrapper .images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.ui-sidebar .content-wrapper img {
+    max-width: 350px;
+    display: block;
+    margin: 10px 20px;
+}
+
+.ui-sidebar .content-wrapper img.nighttime {
+    display: none;
+}
+
+/* Dark Mode */
+.ui-sidebar.dark {
+    background-color: #3F464D;
+    color: #fff;
+}
+
+.ui-sidebar.dark .sidebar-icons,
+.ui-sidebar.dark .offcanvas.offcanvas-start {
+    background-color: #000;
+}
+
+.ui-sidebar a.dark {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: #FFF6E6;
+    color: #000;
+    border: 4px solid #000;
+    padding: 10px;
+    border-radius: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui-sidebar.dark a.dark {
+    background-color: #000;
+    color: #fff;
+    border: 4px solid #fff;
+}
+
+.ui-sidebar a.dark:active {
+    bottom: 7px;
+    box-shadow: 0px 3px 0 #000;
+}
+
+.ui-sidebar.dark a.dark:active {
+    bottom: 7px;
+    box-shadow: 0px 3px 0 #fff;
+}
+
+.ui-sidebar a.dark i {
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+.ui-sidebar a.dark i:nth-child(1) {
+    display: none;
+}
+
+.ui-sidebar.dark a.dark i:nth-child(1) {
+    display: inline-block;
+}
+
+.ui-sidebar.dark a.dark i:nth-child(2) {
+    display: none;
+}
+
+.ui-sidebar.dark .btn i {
+    background-color: #2186C4;
+    color: #fff;
+}
+
+.ui-sidebar.dark .sidebar-icons a:last-child {
+    background-color: #333;
+}
+
+.ui-sidebar.dark .offcanvas-body p:last-child {
+    background-color: #333;
+}
+
+.ui-sidebar.dark .content-wrapper img.nighttime {
+    display: block;
+}
+
+.ui-sidebar.dark .content-wrapper img.daytime {
+    display: none;
+}
+
+s
         .droptarget {
             border: 1px dotted #e60e0e;
         }
@@ -40,7 +430,7 @@
         }
 
         .row {
-            border-bottom: 1px solid #8080806b;
+            /* border-bottom: 1px solid #8080806b; */
         }
 
         .ContainerColumn {
@@ -164,27 +554,45 @@
     position: absolute;
     margin-left: -19px;
 }
+.btn-link {
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
 
-        .component-common {
-            box-sizing: border-box;
+.card-header:first-child {
+    background: #fbfbfb;
+    margin-top: 7px;
+    color: black !important;
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.component-common {
+    box-sizing: border-box;
     border-radius: 4px;
     float: left;
-    height: 65px;
-    width: 45%;
+    height: 35px;
+    width: 93%;
     background-color: white;
     border: 1px solid #0404048f;
     line-height: 1.2;
     margin: 0px;
     margin-bottom: 5px;
     text-align: center;
-    padding-top: 23px;
+    padding-top: 10px;
+    margin-top: 8px;
     margin-left: 10px;
-        }
+}
+
+.card-body {
+    padding-bottom: 23em;
+    background: #f3f3f3;
+}
 
         .component-common:hover {
             background: #79787885;
             color: white;
-            box-shadow: 1px 1px 1px 1px rgb(104, 103, 103);
+             
         }
 
         
@@ -209,13 +617,26 @@
 
 <body>
 <script>
-    
+      function myFunction() {
+    var element = document.getElementById("mainButton");
+    element.classList.toggle("open");
+  }
+
+  function darkFunction() {
+    var element = document.getElementById("mainBody");
+    element.classList.toggle("dark");
+  }
+
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 </script>
     <div class="container-fluid" style="padding: 5px 5px 5px 5px;">
         <div class="row">
 
 
-            <div class="col-md-12">
+            <div class="col-md-12" style="background-color:  #cb3c1f;">
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <a class="navbar-brand" href="#">T FORM BUİLDER</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -237,61 +658,157 @@
         <div class="container-fluid">
         <div class="row">
             <div class="col-md-2" style=" padding: 0px;">
+                <div class="row">
+                <div class="  col-md-2">
+
+                    <div class="sidebar-icons">
+                        <a  data-bs-toggle="tooltip" data-bs-html="true" title="Home" class="active">
+                           
+                        </a>
+                        <a   data-bs-toggle="tooltip" data-bs-html="true" title="Home" class="active">
+                           
+                        </a>
+                        <a     href="#1a" data-toggle="tab"   data-bs-html="true" title="Components">
+                            <i class="fa-solid fa-window-restore"></i>
+                        </a>
+                        <a  href="#search" data-toggle="tab" data-bs-toggle="History Search" data-bs-html="true" title="Account">
+                          <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#history"data-toggle="tab"  data-bs-toggle="tooltip" data-bs-html="true" title="History">
+                            <i class="fa-regular fa-clock"></i>
+                        </a>
+                        <a href="" data-bs-toggle="tooltip" data-bs-html="true" title="Shopping Cart">
+                            <i class="fa-solid fa-gear"></i>
+                        </a>
+                        <a href="" data-bs-toggle="tooltip" data-bs-html="true" title="Linkedln">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="" data-bs-toggle="tooltip" data-bs-html="true" title="github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                
+                        <a href="" data-bs-toggle="tooltip" data-bs-html="true" title="Sign Out">
+                           
+                        </a>
+                      </div>
+                      
+                     
+
+
+                </div>
+
                 
 
 
-                <div id="accordion">
-                    <div class="card">
-                      <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Inputs
-                          </button>
-                        </h5>
-                      </div>
-                  
-                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body">
-                          
-                            <div id=components></div>  
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header" id="headingTwo">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            DropDowns
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <div class="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header" id="headingThree">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Grids
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                        <div class="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
+
+
+
+
+                <div class="  col-md-10">
+                     
+                    <div class="tab-content clearfix">
+                        <div class="tab-pane active" id="1a">
+                            <div id="accordion">
+                                <div class="card">
+                                  <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Inputs
+                                      </button>
+                                    </h5>
+                                  </div>
+                              
+                                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body" id="">
+                                    <div id="components"></div>
+        
+        
+                                        
+        
+                                       
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card">
+                                  <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        DropDowns
+                                      </button>
+                                    </h5>
+                                  </div>
+                                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card">
+                                  <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                      Grids
+                                      </button>
+                                    </h5>
+                                  </div>
+                                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="tab-pane " id="search">
+                       <div class="Container-fluild" style="padding-top: 20px;">
+              <div class="row">
+                <div class="col-md-12">
+                    <input type="text" class="form form-control" placeholder="Component Search">
+                </div>
+              </div>
+                       </div>
+                            
+                          </div>
+                  <div class="tab-pane" id="history">
+                    <div class="Container-fluild" style="padding-top: 20px;">
+                        <div class="row">
+                          <div class="col-md-12">
+                             <div class=" py-2">
+
+                            
+                            <h4>History </h4>
+                        </div>
+                            <ul class="list-unstyled historyli">
+                                <li class="historyli-item">
+                                    test <p>	21.50, Mayıs 22, 2023</p>
+
+                                </li>
+                                <li class="historyli-item">
+                                    test <p>	21.50, Mayıs 22, 2023</p>
+
+                                </li>
+                             </ul>
+
+
+                          </div>
+                        </div>
+                                 </div>
+                    
+                          </div>
+                    <div class="tab-pane" id="4a">
+                    <h3>We use css to change the background color of the content to be equal to the tab</h3>
+                          </div>
+                      </div>
+                </div>
+            </div>
+                
                
 
                 
                     
-                
+        
+  
                             
                       
                     
@@ -311,11 +828,26 @@
         </div>
     </div>
     </div>
- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <div id="exportjson"></div>
     <script> var exports = {};</script>
     <script type="module" src="public/App.js"> </script>
     <script>
+
+          function OnLoadPage(e)  {
+            
+            $("#LoadPage").html("")
+
+            $("#LoadPage").load("accordion.html")
+            
+            function coser(){
+                $("#composer").append("<div id='components'></div>")
+            }
+            setTimeout(coser,500)
+            } 
+
+
         var exportArray = new Array();
         function recursiveEach($element) {
             var localarr = new Array();
